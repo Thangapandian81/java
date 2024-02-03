@@ -4,23 +4,31 @@ class Loop{
     public static void main(String args[])
     {
       long n=35231;
-      String s=n.toString(n);
-      long a[]= new long [s.length];
-      while(n!=0)
+      int i=0;
+      int a[]= new int[10];
+      a[0]=0;
+      a[1]=0;
+      a[2]=0;
+      a[3]=0;
+      a[4]=0;
+     
+             while(n!=0)
       {
-         long digit=n%10;
-         for(int i=0;n!=0;i++)
+         while(i<5)
          {
-            a[i]=digit;
+          
+         long digit=n%10;
+         int num= (int)digit;
+            a[i]=num;
+            i++;
          }
+       
          n=n/10;
-
-         
+         System.out.println(n);
       }
-      for(int i=0;i<a.length;i++)
+      for(int j=0;j<5;j++)
       {
-      System.out.println(a[i]);
+         System.out.println(a[j]);
       }
-   
     }
 }
